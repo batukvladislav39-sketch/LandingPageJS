@@ -1,4 +1,6 @@
+import "./styles/base.css";
 import { getSettnigs, getPages } from "./api.js";
+import { renderBlocks } from "./render.js";
 
 const app = document.querySelector('#app');
 
@@ -11,7 +13,7 @@ async function start() {
 
     document.title = `${page.title} - ${settings.siteName}`;
 
-    console.log(settings, page);
+    app.innerHTML = `<main>${renderBlocks(page.blocks)}</main>`;
 
   } catch (error) {
     app.textContent = `Something went wrong: ${error.message}`;
