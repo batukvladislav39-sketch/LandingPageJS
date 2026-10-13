@@ -1,6 +1,4 @@
-import { equal } from "assert";
 import type { Endpoint, PayloadRequest } from "payload";
-import { title } from "process";
 
 function blockCleaner(block: Record<string, any>){
     const { id, blockName, blockType, image, ...rest} = block;
@@ -32,7 +30,7 @@ export const commonEndpoint: Endpoint = {
 
 
 export const pageEndpoint: Endpoint = {
-    path: '.page',
+    path: '/page',
     method: 'get',
     handler: async (req: PayloadRequest) => {
         const path = req.query.path;

@@ -11,9 +11,9 @@ async function getJSON(path) {
 }
 
 export function getSettnigs() {
-    return getJSON('/api/settings');
+    return getJSON('/api/common');
 }
 
 export function getPages(path) {
-    return getJSON(`/api/pages?path=${encodeURIComponent(path)}`);
+    return getJSON(`/api/page?path=${encodeURIComponent(path)}`);
 }
