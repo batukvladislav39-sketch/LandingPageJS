@@ -1,15 +1,15 @@
 import "./styles/base.css";
-import { getSettnigs, getPages } from "./api.js";
-import { renderBlocks } from "./render.js";
-import { header } from "./layout/header.js";
-import { footer } from "./layout/footer.js";
+import { getSettings, getPages } from "./api";
+import { renderBlocks } from "./render";
+import { header } from "./layout/header";
+import { footer } from "./layout/footer";
 
 const app = document.querySelector('#app');
 
 async function start() {
   try {
     const [ settings, page ] = await Promise.all([
-      getSettnigs(),
+      getSettings(),
       getPages(location.pathname)
   ])
 

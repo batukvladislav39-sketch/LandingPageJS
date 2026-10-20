@@ -16,14 +16,12 @@ export const commonEndpoint: Endpoint = {
     path: '/common',
     method: 'get',
     handler: async (req: PayloadRequest) => {
-        const common = await req.payload.findGlobal({slug: 'common', depth: 1})
+        const common = await req.payload.findGlobal({ slug: 'common', depth: 1 })
 
         return Response.json({
             siteName: common.siteName,
-            menu: (common.menu ?? []).map(({ label, link }: any) => {
-                ({ label, link })
-            }),
-            footer: {text: common.footer?.text ?? ''}
+            menu: (common.menu ?? []).map(({ label, link }) => ({ label, link })),
+            footer: { text: common.footer?.text ?? '' },
         });
     }
 }

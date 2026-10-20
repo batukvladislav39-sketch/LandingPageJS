@@ -1,4 +1,4 @@
-const API_URL = import.meta.env.VITE_API_URL;
+const API_URL = import.meta.env.VITE_API_URL
 
 async function getJSON(path) {
     const res = await fetch(`${API_URL}${path}`);
@@ -10,7 +10,7 @@ async function getJSON(path) {
     return res.json();
 }
 
-export function getSettnigs() {
+export function getSettings() {
     return getJSON('/api/common');
 }
 

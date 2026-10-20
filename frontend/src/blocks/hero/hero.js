@@ -1,8 +1,8 @@
 import "./hero.css";
 
-export function hero({ anchore, badge, title, subtitle, image: { src, alt }, buttons }) {
+export function hero({ anchor, badge, title, subtitle, image: { src, alt }, buttons }) {
     return `
-        <section class="hero" id="${anchore}">
+        <section class="hero" id="${anchor}">
             <div class="hero__content">
                 <span class="hero__badge">${badge}</span>
                 <h1 class="hero__title">${title}</h1>

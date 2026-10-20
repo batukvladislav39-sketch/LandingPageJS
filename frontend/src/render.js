@@ -1,7 +1,7 @@
-import { hero } from './blocks/hero/hero.js';
-import { features } from './blocks/hero/features/features.js';
+import { hero } from './blocks/hero/hero';
+import { features } from './blocks/hero/features/features';
 
-const renderers = { features, hero };
+const renderers = { hero, features };
 
 export function renderBlocks(blocks) {
     return blocks.map((block) => {
